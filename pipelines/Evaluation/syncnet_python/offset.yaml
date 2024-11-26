@@ -1,0 +1,22 @@
+datasets:
+  - path: /psyai/dengjunli/DINet/asserts/training_data/
+    name: hdtf
+    split: info
+  - path: /psyai/xuhao/shensi_262_25fps
+    name: shensi
+    split: info
+  - path: /psyai/data_common/3300_25fps
+    name: 3300_new
+    split: info
+  - path: /psyai/data_common/avspeech/AVSpeech_25fps
+    name: avspeech
+    split: info
+  - path: /psyai/4k_dataset
+    name: 4k_new
+    split: info
+  - path: /psyai/pengziqiao/CMLR
+    name: cmlr
+    split: info
+  - path: /data/xuhao/datasets/lrs2_original
+    name: lrs2
+    split: info

@@ -1,0 +1,29 @@
+name: hdtf+shensi_262+3300_new+lrs2
+datasets:
+  train:
+    - path: data/hdtf_image_down=0.1
+      audio_path: data/hdtf_audio
+      name: hdtf
+      split: main
+      ratio: 0.15
+    - path: data/shensi_262_image_down=0.1
+      audio_path: data/shensi_262_audio
+      name: shensi_262
+      split: main
+      ratio: 0.34
+    - path: data/3300_image_down=0.1
+      audio_path: data/3300_audio
+      name: 3300_new
+      split: main
+      ratio: 0.45
+    - path: data/lrs2_main_image_down=0.1
+      audio_path: data/lrs2_main_audio
+      name: lrs2
+      split: main
+      ratio: 0.06
+  val:
+    - path: data/shensi_262_image_down=0.1
+      audio_path: data/shensi_262_audio
+      name: shensi_262
+      split: main
+      ratio: 1.0

@@ -1,0 +1,13 @@
+export CUDA_VISIBLE_DEVICES=2
+export CUDA_HOME=/usr/local/cuda-11.8/
+export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
+python train.py --outdir=./training-runs \
+                --snap=50 \
+                --gpus=1 \
+                --cfg=stylegan3-t \
+                --batch=16 \
+                --gamma=2 \
+                --data_root=/mnt/hdtf_btm_move/ \
+                --fullname=hdtf \
+                --syncnet_t=1 \
+                --use_wandb=False

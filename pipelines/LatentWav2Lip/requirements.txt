@@ -1,0 +1,13 @@
+librosa
+numpy
+opencv-contrib-python
+opencv-python
+torch
+torchvision
+tqdm
+numba
+diffusers
+accelerate
+lightning
+lightning[extra]
+deepspeed

@@ -1,0 +1,14 @@
+name: hdtf
+datasets:
+  train:
+    - path: /mnt/hdtf_preprocessed_down=0.1
+      audio_path: /mnt/hdtf_audios/
+      name: hdtf
+      split: main
+      ratio: 1.0
+  val:
+    - path: /mnt/hdtf_preprocessed_down=0.1
+      audio_path: /mnt/hdtf_audios/
+      name: hdtf
+      split: main
+      ratio: 1.0

@@ -1,0 +1,14 @@
+name: lrs2
+datasets:
+  train:
+    - path: /data/xuhao/datasets/lrs2/lrs2-resize=640-crop-down=0.1/
+      audio_path: /data/xuhao/datasets/lrs2/lrs2_main_audio/
+      name: lrs2
+      split: train
+      ratio: 1.0
+  val:
+    - path: /data/xuhao/datasets/lrs2/lrs2-resize=640-crop-down=0.1/
+      audio_path: /data/xuhao/datasets/lrs2/lrs2_main_audio/
+      name: lrs2
+      split: val
+      ratio: 1.0

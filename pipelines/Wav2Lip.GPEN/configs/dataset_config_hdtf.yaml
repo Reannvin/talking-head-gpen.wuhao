@@ -1,0 +1,14 @@
+name: hdtf
+datasets:
+  train:
+    - path: /data/xuhao/datasets/hdtf/hdtf-resize=640-crop-down=0.1/
+      audio_path: /data/xuhao/datasets/hdtf/hdtf_audios/
+      name: hdtf
+      split: main
+      ratio: 1.0
+  val:
+    - path: /data/xuhao/datasets/hdtf/hdtf-resize=640-crop-down=0.1/
+      audio_path: /data/xuhao/datasets/hdtf/hdtf_audios/
+      name: hdtf
+      split: main
+      ratio: 1.0

@@ -1,0 +1,11 @@
+librosa
+numpy
+opencv-contrib-python
+opencv-python
+torch
+torchvision
+tqdm
+numba
+torchsummary
+pandas
+pytorch_lightning

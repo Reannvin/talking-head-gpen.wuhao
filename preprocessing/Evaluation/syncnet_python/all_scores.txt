@@ -1,0 +1,33 @@
+Processing file: /home/renxiaotian/workspace/data_process/testdata/input/test_video//F0sVU-nXaEQ_121.666667-126.166667.mp4
+8.82464 4.695035
+Processing file: /home/renxiaotian/workspace/data_process/testdata/input/test_video//UlM0v35FC2Y_116.986533-119.986533.mp4
+8.82464 4.695035
+Processing file: /home/renxiaotian/workspace/data_process/testdata/input/test_video//UlO6WovFvz4_278.044433-290.123167.mp4
+8.82464 4.695035
+Processing file: /home/renxiaotian/workspace/data_process/testdata/input/test_video//zyweG7K--2w_270.000000-279.166667.mp4
+8.82464 4.695035
+Processing file: /home/renxiaotian/workspace/data_process/testdata/input/test_video//zztdedS-kec_210.000000-215.720000.mp4
+8.82464 4.695035
+Processing file: /home/renxiaotian/workspace/data_process/testdata/input/test_video//F0sVU-nXaEQ_121.666667-126.166667.mp4
+8.82464 4.695035
+Processing file: /home/renxiaotian/workspace/data_process/testdata/input/test_video//UlM0v35FC2Y_116.986533-119.986533.mp4
+8.82464 4.695035
+Processing file: /home/renxiaotian/workspace/data_process/testdata/input/test_video/UlO6WovFvz4_278.044433-290.123167.mp4
+8.82464 4.695035
+Processing file: /home/renxiaotian/workspace/data_process/testdata/input/test_video//zyweG7K--2w_270.000000-279.166667.mp4
+8.82464 4.695035
+Processing file: /home/renxiaotian/workspace/data_process/testdata/input/test_video//zztdedS-kec_210.000000-215.720000.mp4
+8.82464 4.695035
+9.080267 5.557884
+7.860449 7.2366276
+8.82464 4.695035
+9.080267 5.557884
+7.686414 1.4881153
+7.003719 7.539574
+7.493578 7.4310207
+Processing file: /data/fanshen/workspace/preprocessing/test_video/UlO6WovFvz4_278.044433-290.123167.mp4
+./
+Processing file: /home/renxiaotian/workspace/data_process/testdata/input/test_video/UlO6WovFvz4_278.044433-290.123167.mp4
+7.860449 7.2366276
+Processing file: /data/fanshen/workspace/preprocessing/test_video/UlO6WovFvz4_278.044433-290.123167.mp4
+7.860449 7.2366276

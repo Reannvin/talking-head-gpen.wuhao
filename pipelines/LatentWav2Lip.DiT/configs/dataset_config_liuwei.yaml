@@ -1,0 +1,14 @@
+name: liuwei
+datasets:
+  train:
+    - path: /data/xuhao/datasets/shensi/shensi_10_preprocessed_down=0.1
+      audio_path: /data/xuhao/datasets/shensi/shensi_10_audios
+      name: liuwei
+      split: main
+      ratio: 1.0
+  val:
+    - path: /data/xuhao/datasets/shensi/shensi_10_preprocessed_down=0.1
+      audio_path: /data/xuhao/datasets/shensi/shensi_10_audios
+      name: liuwei
+      split: main
+      ratio: 1.0

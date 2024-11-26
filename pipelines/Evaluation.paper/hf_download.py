@@ -1,0 +1,2 @@
+from huggingface_hub import hf_hub_download
+hf_hub_download(repo_id="yzd-v/DWPose", filename="dw-ll_ucoco_384.pth", local_dir = '/data/shenfan/workspace/code/talking-head/pipelines/Evaluation.paper/checkpoints')

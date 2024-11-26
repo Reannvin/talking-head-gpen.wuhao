@@ -1,0 +1,29 @@
+name: hdtf+shensi+3300+lrs2
+datasets:
+  train:
+    - path: /data/xuhao/datasets/hdtf/hdtf-resize=640-crop-down=0.1/
+      audio_path: /data/xuhao/datasets/hdtf/hdtf_audios/
+      name: hdtf
+      split: main
+      ratio: 0.25
+    - path: /data/xuhao/datasets/shensi/shensi-262-resize=640-crop-down=0.1/
+      audio_path: /data/xuhao/datasets/shensi/shensi_262_audios/
+      name: shensi_262
+      split: main
+      ratio: 0.25
+    - path: /data/xuhao/datasets/3300/3300-resize=640-crop-down=0.1/
+      audio_path: /data/xuhao/datasets/3300/3300_audios/
+      name: 3300
+      split: main
+      ratio: 0.40   
+    - path: /data/xuhao/datasets/lrs2/lrs2-resize=640-crop-down=0.1/
+      audio_path: /data/xuhao/datasets/lrs2/lrs2_main_audio/
+      name: lrs2
+      split: main
+      ratio: 0.10
+  val:
+    - path: /data/xuhao/datasets/shensi/shensi-262-resize=640-crop-down=0.1/
+      audio_path: /data/xuhao/datasets/shensi/shensi_262_audios/
+      name: shensi_262
+      split: main
+      ratio: 1.0

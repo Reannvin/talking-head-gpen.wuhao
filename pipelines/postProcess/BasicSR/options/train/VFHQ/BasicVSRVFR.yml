@@ -1,0 +1,137 @@
+# general settings
+name: BasicVS_vfhq_VFR_perce_W2
+#model_type: VideoRecurrentModel
+model_type: VideoRecurrentPerceptualModel
+scale: 1
+num_gpu: 4  # set num_gpu: 0 for cpu mode
+manual_seed: 0
+
+# dataset and data loader settings
+datasets:
+  train:
+    name: VFHQ
+    type: RecurrentVFHQRealDegradation2Dataset
+    dataroot_gt: datasets/VFHQ/512x512_LANCZOS4
+    global_meta_info_file: datasets/meta_info_vfhq_all_vox.txt
+    io_backend:
+      type: disk
+
+    scale: 1
+    num_frame: 7
+    interval_list: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    random_reverse: false
+    use_flip: false
+    use_rot: false
+
+    # degradation
+    blur_kernel_size: 21
+    kernel_list: ['iso', 'aniso']
+    kernel_prob: [0.7, 0.3]
+    blur_x_sigma: [0.1, 10]
+    blur_y_sigma: [0.1, 10]
+    noise_range: [0, 10]
+    resize_prob: [0.3, 0.3, 0.4]
+    crf_range: [18, 25]
+
+    # data loader
+    use_shuffle: true
+    num_worker_per_gpu: 6
+    batch_size_per_gpu: 2
+    dataset_enlarge_ratio: 1
+    prefetch_mode: ~
+
+  val:
+    name: vid4
+    # name: VFHQ-mfsr-cubic-test
+    type: VideoRecurrentTestDataset
+    dataroot_gt: datasets/test/Test_GT
+    dataroot_lq: datasets/test/Test_LR
+
+    cache_data: true
+    io_backend:
+      type: disk
+
+    num_frame: -1  # not needed
+
+# network structures
+network_g:
+  #type: BasicVSRVFR
+  #num_feat: 32
+  #num_block: 12
+  #spynet_path: experiments/pretrained_models/flownet/spynet_sintel_final-3d2a1287.pth
+  type: BasicVSRPlusPlus
+  mid_channels: 64
+  num_blocks: 7
+  is_low_res_input: false
+  spynet_path: experiments/pretrained_models/flownet/spynet_sintel_final-3d2a1287.pth
+
+
+# path
+path:
+  #pretrain_network_g: experiments/pretrained_models/Blind-Setting-X4/BasicVSR/net_g_300000.pth
+  pretrain_network_g: ~
+  strict_load_g: True
+  resume_state: ~
+
+# training settings
+train:
+  ema_decay: 0.999
+  optim_g:
+    type: Adam
+    lr: !!float 1e-4
+    weight_decay: 0
+    betas: [0.9, 0.99]
+  lr_flow: !!float 0
+
+  scheduler:
+    type: MultiStepLR
+    milestones: [50000, 100000, 200000, 300000]
+    gamma: 0.5
+
+  total_iter: 400000
+
+  warmup_iter: -1  # no warm up
+  fix_flow: ~
+
+  # losses
+  pixel_opt:
+    type: CharbonnierLoss
+    loss_weight: !!float 1e-2
+    reduction: mean
+  perceptual_opt:
+    type: PerceptualLoss
+    layer_weights:
+      'conv5_4': 1  # before relu
+    vgg_type: vgg19
+    use_input_norm: true
+    range_norm: false
+    perceptual_weight: 1.0
+    style_weight: 0
+    criterion: l1
+
+# validation settings
+val:
+  val_freq: !!float 5e3
+  save_img: false
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 4
+      test_y_channel: false
+
+# logging settings
+logger:
+  print_freq: 100
+  save_checkpoint_freq: !!float 5e3
+  use_tb_logger: true
+  wandb:
+    project: ~
+    resume_id: ~
+
+# dist training settings
+dist_params:
+  backend: nccl
+  port: 29500
+
+find_unused_parameters: true
